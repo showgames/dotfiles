@@ -25,6 +25,13 @@ set smarttab
 
 set clipboard=unnamed
 
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+
 "-----------------------------------------------------
 " .vimrcを瞬時に開く
 nnoremap <Space><Space>. :e $MYVIMRC<CR>
