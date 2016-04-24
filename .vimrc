@@ -1,8 +1,9 @@
 " ファイル形式別のプラグライン・インデントを有効にする
 filetype plugin indent on
-" シンタックスハイライトを有効にする
+"シンタックスハイライトを有効にする
 syntax on
-
+colorscheme eva
+hi Comment ctermfg=White
 set nowrap
 
 set hlsearch
@@ -65,7 +66,7 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplete.vim'
-
+NeoBundle 'jyota/vimColors'
 NeoBundleLazy 'vim-jp/cpp-vim', {
             \ 'autoload' : {'filetypes' : 'cpp'}
             \}
