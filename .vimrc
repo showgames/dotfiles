@@ -26,18 +26,21 @@ set smarttab
 
 set clipboard=unnamed
 
+"-----------------------------------------------------
+"Start key-bind Settings
+"-----------------------------------------------------
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h
-
-"-----------------------------------------------------
 " .vimrcを瞬時に開く
 nnoremap <Space><Space>. :e $MYVIMRC<CR>
 " .vimrcの設定を反映
 nnoremap <Space><Space>.. :<C-u>source $MYVIMRC<CR>
+"-----------------------------------------------------
+"End key-bind Settings
 "-----------------------------------------------------
 
 " ----------------------------------------------------
@@ -70,6 +73,10 @@ NeoBundle 'jyota/vimColors'
 NeoBundleLazy 'vim-jp/cpp-vim', {
             \ 'autoload' : {'filetypes' : 'cpp'}
             \}
+NeoBundle 'justmao945/vim-clang'
+" Set clang options for vim-clang
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
 
 call neobundle#end()
 
