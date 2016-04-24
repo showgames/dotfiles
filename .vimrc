@@ -49,6 +49,15 @@ autocmd FileType scheme setlocal expandtab shiftwidth=2
 " ----------------------------------------------------
 
 "---------------------------------------------------
+"Start clang-format Settings
+"---------------------------------------------------
+map <C-K> :pyf /usr/local/share/clang/clang-format.py<cr>
+imap <C-K> <c-o> :pyf /usr/local/share/clang/clang-format.py<cr>
+"---------------------------------------------------
+"End clang-format Settings
+"---------------------------------------------------
+
+"---------------------------------------------------
 "Start Neobundle Settings.
 "---------------------------------------------------
 " bundleで管理するディレクトリを指定
@@ -70,6 +79,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'jyota/vimColors'
+NeoBundle 'vim-scripts/DoxygenToolkit.vim'
 NeoBundleLazy 'vim-jp/cpp-vim', {
             \ 'autoload' : {'filetypes' : 'cpp'}
             \}
