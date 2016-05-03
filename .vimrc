@@ -2,7 +2,7 @@
 filetype plugin indent on
 "シンタックスハイライトを有効にする
 syntax on
-colorscheme eva
+colorscheme zenburn
 hi Comment ctermfg=White
 set nowrap
 
@@ -17,7 +17,7 @@ set number
 set list
 set wildmenu
 set showcmd
-
+set cmdheight=2
 set shiftwidth=4
 set softtabstop=4
 set expandtab
