@@ -11,10 +11,9 @@ set ignorecase
 set smartcase
 
 set autoindent
-
+set backspace=indent,eol,start
 set ruler
 set number
-set list
 set wildmenu
 set showcmd
 set cmdheight=2
@@ -71,9 +70,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " プラグイン追加"
 NeoBundle 'thinca/vim-quickrun'
+" 垂直分割にする
+let g:quickrun_config={'*': {'split': 'vertical'}}
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'shougo/vimshell'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
@@ -91,6 +93,14 @@ let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
 NeoBundle 'aharisu/vim_goshrepl'
 NeoBundle 'aharisu/vim-gdev'
 vmap <CR> <Plug>(gosh_repl_send_block)
+" syntax checking plugin
+NeoBundle 'scrooloose/syntastic'
+" autocompletion
+NeoBundle 'davidhalter/jedi-vim'
+" Outline plugin
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
+nnoremap <C-o> :Unite -vertical -no-quit -winwidth=32 outline<Esc>
 
 call neobundle#end()
 
